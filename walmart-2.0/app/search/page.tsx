@@ -1,3 +1,4 @@
+import fetchSearchData from "@/lib/fetchSearch";
 import React from "react";
 
 type Props = {
@@ -5,7 +6,9 @@ type Props = {
     q: string;
   };
 };
-const SearchPage = ({ searchParams: { q } }: Props) => {
+const SearchPage = async ({ searchParams: { q } }: Props) => {
+  const results = await fetchSearchData(q);
+  //   console.log("results", results);
   return <div>SearchPage</div>;
 };
 
