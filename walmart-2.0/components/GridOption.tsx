@@ -11,10 +11,10 @@ type Props = {
 const GridOption = ({ title, image, className }: Props) => {
   return (
     <Link
-      href={{ pathname: "/", query: { q: title } }}
+      href={{ pathname: "/search", query: { q: title } }}
       className={cn("grid_option relative", className)}
     >
-      <h2>{title}</h2>
+      <h2 className="text-xl font-bold">{title}</h2>
       {image && (
         <Image
           src={image}

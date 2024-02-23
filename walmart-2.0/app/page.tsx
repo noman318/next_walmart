@@ -3,7 +3,7 @@ import GridOption from "@/components/GridOption";
 export default function Home() {
   return (
     <main className="p-2 overflow-hidden">
-      <div className="grid grid-cols-1 grid-flow-row-dense md:grid-cols-4">
+      <div className="grid grid-cols-1 grid-flow-row-dense md:grid-cols-4 gap-6 m-6">
         <GridOption
           title="Sweet gifts for less"
           image="https://images.pexels.com/photos/704748/pexels-photo-704748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
