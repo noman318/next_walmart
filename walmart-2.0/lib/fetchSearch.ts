@@ -23,6 +23,7 @@ async function fetchSearchData(searchTerm: string) {
         "Basic " +
         Buffer.from(`${userName}:${userPassword}`).toString("base64"),
     },
+    next: { revalidate: 60 * 60 * 24 },
   })
     .then((res) => res.json())
     .then((data) => {

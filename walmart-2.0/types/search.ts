@@ -23,18 +23,24 @@ export interface Content {
   last_visible_page: number;
   parse_status_code: number;
 }
-interface Price {
+export interface Price {
   price: number;
   currency: string;
 }
 
-interface Rating {
+export interface Rating {
   count: number;
   rating: number;
 }
 
-interface Seller {
+export interface Seller {
   name: string;
+}
+
+export interface Variant {
+  url: string;
+  title: string;
+  product_id: string;
 }
 
 export interface OrganicProduct {
@@ -44,4 +50,7 @@ export interface OrganicProduct {
   rating: Rating;
   seller: Seller;
   product_id: string;
+  image: string;
+  badge: string;
+  variants: Variant[];
 }
