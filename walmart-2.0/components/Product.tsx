@@ -28,6 +28,7 @@ const Product = ({ product }: { product: OrganicProduct }) => {
       {product.badge && (
         <Badge className="w-fit absolute top-2 right-2">{product.badge}</Badge>
       )}
+      <p className="font-light">{product.title}</p>
       {product.rating && product.rating.rating > 0 && (
         <p className="text-sm text-yellow-500">
           {product.rating.rating}⭐
