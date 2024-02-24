@@ -66,8 +66,8 @@ const ProductPage = async ({ searchParams: { url } }: Props) => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="ml-0 md:ml-24" />
+        <CarouselNext className="mr-0 md:mr-24" />
       </Carousel>
       <div className="flex-1 border rounded-md w-full p-5 space-y-5">
         <h2 className="text-2xl font-bold">{product.content.title}</h2>
