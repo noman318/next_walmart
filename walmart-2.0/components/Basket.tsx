@@ -13,19 +13,19 @@ const Basket = () => {
   //   console.log("cart", cart);
   const baskeTotal = getCartTotal(cart);
   //@ts-ignore
-  const newGroup = Object?.groupBy(
-    cart,
-    (item: ProductContent) => item.meta.sku
-  );
-  console.log("newGroup", newGroup);
+  // const newGroup = Object?.groupBy(
+  //   cart,
+  //   (item: ProductContent) => item.meta.sku
+  // );
+  // console.log("newGroup", newGroup);
   const goupedBasket = groupedBasket(cart);
   //   console.log("goupedBasket", goupedBasket);
   return (
     <div className="max-w-7xl mx-auto">
       <ul className="space-y-5 divide-y-2">
-        {Object.keys(newGroup)?.map((sku) => {
-          const item = newGroup[sku][0];
-          const total = getCartTotal(newGroup[sku]);
+        {Object.keys(goupedBasket)?.map((sku) => {
+          const item = goupedBasket[sku][0];
+          const total = getCartTotal(goupedBasket[sku]);
           return (
             <li
               key={sku}
